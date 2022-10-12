@@ -67,14 +67,59 @@ h6 {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1230px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  line-height: 150%;
+  color: #31352B;
+  font-weight: 400;
+  background-color: #F9FAFF;
 }
 
 body.locked {
   overflow: hidden;
+}
+
+.btn {
+  padding: 12px 32px;
+  background-color: #FF6838;
+  border-radius: 6px;
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s, box-shadpw 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, box-shadpw 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadpw 0.2s, color 0.2s;
+}
+
+.btn:focus {
+  background: rgba(255, 122, 80, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+  color: #FF6838;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+  color: #FF6838;
+}
+
+.section-title {
+  padding-top: 120px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+  color: #363853;
+  text-align: center;
+  padding: 120px 0 60px 0;
 }
 
 @-webkit-keyframes fade {
@@ -98,7 +143,6 @@ body.locked {
 }
 
 nav {
-  background-color: rgba(0, 119, 134, 0.651);
   overflow: hidden;
 }
 
@@ -107,34 +151,193 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 60px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
-.logo a {
-  color: white;
+.navbar .logo__link {
+  display: block;
+  -webkit-transition: opacity 0.2s, -webkit-box-shadow 0.2s;
+  transition: opacity 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: opacity 0.2s, box-shadow 0.2s;
+  transition: opacity 0.2s, box-shadow 0.2s;
+  transition: opacity 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.navbar .logo__link:focus {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+}
+
+.navbar .logo__link:hover {
+  opacity: 0.8;
+}
+
+.navbar .logo__link:active {
+  opacity: 0.5;
 }
 
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
+  margin-right: 60px;
 }
 
-.menu__item {
-  margin-left: 25px;
+.menu__item:not(:last-child) {
+  margin-right: 45px;
 }
 
 .menu__item-link {
-  color: white;
+  color: #31352B;
+  -webkit-transition: color 0.2s, -webkit-box-shadow 0.2s;
+  transition: color 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, box-shadow 0.2s;
+  transition: color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.menu__item-link:focus {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+}
+
+.menu__item-link:hover {
+  color: #FF6838;
+}
+
+.menu__item-link:active {
+  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+}
+
+.menu__item-link--active {
+  color: #FF6838;
+}
+
+.user-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+}
+
+.user-nav .user-item__link {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.user-nav .user-item__link:focus {
+  background-color: rgba(255, 122, 80, 0.1);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+}
+
+.user-nav .user-item__link:hover {
+  background-color: #FF6838;
+  border-radius: 5px;
 }
 
 .burger {
   display: none;
   cursor: pointer;
+}
+
+.hero-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-content {
+  max-width: 450px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-content__title {
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 130%;
+  color: #31352B;
+  text-transform: uppercase;
+}
+
+.hero-content__title span {
+  color: #FF6838;
+  display: block;
+}
+
+.hero-content__subtitle {
+  margin-bottom: 20px;
+}
+
+.hero-content__link {
+  display: block;
+}
+
+.hero-content__btn {
+  background: none;
+  color: #363853;
+  text-decoration: underline;
+  margin-left: 25px;
+  padding: 5px 3px;
+  -webkit-transition: color 0.2s, text-shadow 0.2s, -webkit-box-shadow 0.2s;
+  transition: color 0.2s, text-shadow 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s, color 0.2s, text-shadow 0.2s;
+  transition: box-shadow 0.2s, color 0.2s, text-shadow 0.2s;
+  transition: box-shadow 0.2s, color 0.2s, text-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.hero-content__btn:focus {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+          box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  border-radius: 5px;
+}
+
+.hero-content__btn:hover {
+  color: #FF6838;
+}
+
+.hero-content__btn:active {
+  text-shadow: 2px 2px 5px rgba(54, 56, 83, 0.5);
+  color: #31352B;
 }
 
 @media (max-width: 1449.98px) {

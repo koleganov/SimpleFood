@@ -1,20 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>SimpleFood | Главная страница</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="main__body">
     <!-- Header -->
-    
+    <header>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a class="logo__link" href="#">
+                        <img src="../img/logo.svg" alt="logo">
+                    </a> 
+                </div>
+                <ul class="menu">
+                    <li class="menu__item"><a href="#" class="menu__item-link menu__item-link--active" data-scroll>Главная</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Блюда</a></li>
+                    <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
+                </ul>
+                <ul class="user-nav">
+                    <li class="user-item">
+                        <a href="#" class="user-item__link">
+                            <img class="user-item__img" src="../img/search-btn.svg" alt="картинка поиска" >
+                        </a>
+                    </li>
+                    <li class="user-item">
+                        <a href="#" class="user-item__link">
+                            <img class="user-item__img" src="../img/buy-btn.svg" alt="картинка покупки">
+                            <!-- <span class="user-item__count">4</span> -->
+                        </a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <!-- Main Page -->
-    <main></main>
+    <main>
+        <section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-content__title">
+                    Доставка
+                    <span>за 15 минут</span>
+                </h1>
+                <p class="hero-content__subtitle">
+                    Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+                </p>
+                <div class="hero-buttons">
+                    <a class="hero-btn" href="#">
+                        <button class="btn">Заказать</button>
+                    </a>
+                    <a class="hero-btn" href="#">
+                        <button class="hero-content__btn">Подробнее</button>
+                    </a>
+                </div>
+                
+            </div>
+            <img src="../img/scooter-guy.png" alt="" class="hero-img" width="560" height="660">
+        </div>
+    </div>
+</section>
+        <section class="popular">
+    <div class="container">
+        <h2 class="section-title">
+            Популярные категории
+        </h2>
+    </div>
+</section>
+    </main>
 
     <!-- Footer -->
     
